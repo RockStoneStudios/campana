@@ -12,8 +12,8 @@ function init() {
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
-  var width = 120;
-  var height = 80;
+  var width = 150;
+  var height = 90;
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
@@ -32,7 +32,7 @@ function init() {
 	
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:-1, repeatDelay:3.2, yoyo: true});
+  var tl = new TimelineMax({repeat:-1, repeatDelay:3.4, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
@@ -71,7 +71,7 @@ function Slide(width, height, animationPhase) {
   var maxDuration = 9.2;
   var maxDelayX = 6;
   var maxDelayY = 2.125;
-  var stretch = 0.1;
+  var stretch = 0.09;
 
   this.totalDuration = maxDuration + maxDelayX + maxDelayY + stretch;
 
